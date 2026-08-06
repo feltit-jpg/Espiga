@@ -33,6 +33,40 @@ document.addEventListener('DOMContentLoaded', function () {
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // ===== Hero: la focaccia "se abre" y revela sus ingredientes al hacer scroll =====
+  var heroSection = document.getElementById('inicio');
+  var heroBgImg = document.querySelector('#heroBg img');
+  var heroIngredients = document.getElementById('heroIngredients');
+  if (heroSection && heroBgImg && heroIngredients) {
+    var ticking = false;
+    var updateHero = function () {
+      var heroHeight = heroSection.offsetHeight || 1;
+      var progress = window.scrollY / heroHeight;
+      if (progress < 0) progress = 0;
+      if (progress > 1) progress = 1;
+
+      var scale = 1 + progress * 0.32;
+      var posY = 22 + progress * 30; // baja hacia el corte relleno de la ciabatta
+      heroBgImg.style.transform = 'scale(' + scale.toFixed(3) + ')';
+      heroBgImg.style.objectPosition = 'center ' + posY.toFixed(1) + '%';
+
+      if (progress > 0.32) {
+        heroIngredients.classList.add('show');
+      } else {
+        heroIngredients.classList.remove('show');
+      }
+      ticking = false;
+    };
+    updateHero();
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHero);
+        ticking = true;
+      }
+    }, { passive: true });
+    window.addEventListener('resize', updateHero);
+  }
+
   // ===== Sliders de fotos que avanzan solos (ej. Lo nuevo) =====
   document.querySelectorAll('.photo-slider').forEach(function (slider) {
     var track = slider.querySelector('.photo-slider-track');
