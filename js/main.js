@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var heroSection = document.getElementById('inicio');
   var heroBgImg = document.querySelector('#heroBg img');
   var heroIngredients = document.getElementById('heroIngredients');
-  if (heroSection && heroBgImg && heroIngredients) {
+  if (heroSection && heroBgImg && heroIngredients) { heroIngredients.classList.add('show');
     var ticking = false;
     var updateHero = function () {
       var heroHeight = heroSection.offsetHeight || 1;
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
       heroBgImg.style.transform = 'scale(' + scale.toFixed(3) + ')';
       heroBgImg.style.objectPosition = 'center ' + posY.toFixed(1) + '%';
 
-      if (progress > 0.32) {
+      if (true) {
         heroIngredients.classList.add('show');
       } else {
         heroIngredients.classList.remove('show');
