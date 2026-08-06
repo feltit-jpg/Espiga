@@ -155,11 +155,11 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
 
 /* ===== Hero (foto fija de focaccia rellena) ===== */
 .hero{
-  position: relative; min-height: 92vh;
-  display:flex; align-items:flex-end; overflow:hidden;
+  position: relative; min-height: 170vh;
+  
   color: var(--cream-white);
 }
-.hero-bg{ position:absolute; inset:0; z-index:0; overflow:hidden; background: var(--dark); }
+.hero-pin{ position: sticky; top:70px; height:92vh; display:flex; align-items:flex-end; overflow:hidden; } .hero-bg{ position:absolute; inset:0; z-index:0; overflow:hidden; background: var(--dark); }
 .hero-bg img{
   width:100%; height:100%; object-fit:cover; object-position:center 22%; display:block;
   transform: scale(1); transform-origin:center 30%;
@@ -501,7 +501,7 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
 /* ===== Negocios (B2B) ===== */
 .negocios-section{ background: #ffffff; background-image: var(--wheat-bg); background-repeat: repeat; }
 .b2b-intro{ display:flex; gap:36px; align-items:flex-start; margin-bottom: 36px; flex-wrap:wrap; }
-.b2b-photos{ display:grid; grid-template-columns: 1.3fr 1fr; grid-template-rows: 1fr 1fr; gap:12px; width:380px; height:300px; flex-shrink:0; } .b2b-photos img{ width:100%; height:100%; object-fit:cover; border-radius: var(--radius); box-shadow: var(--shadow-soft); display:block; } .b2b-photo-main{ grid-row: 1 / span 2; }
+.b2b-photos{ display:flex; gap:12px; width:380px; height:300px; flex-shrink:0; } .b2b-photos img{ flex:1; height:100%; object-fit:cover; border-radius: var(--radius); box-shadow: var(--shadow-soft); display:block; } 
 .b2b-intro-copy{ flex:1; min-width:260px; }
 .b2b-intro-copy p{ color:#31302a; font-size:15.5px; }
 .b2b-form{
@@ -521,5 +521,5 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
 
 @media (max-width: 760px){
   .b2b-form{ grid-template-columns: 1fr; }
-  .instagram-grid{ grid-template-columns: repeat(3,1fr); } .b2b-photos{ width:100%; height:auto; grid-template-columns: 1fr 1fr; grid-template-rows: 200px 140px; } .b2b-photo-main{ grid-column: 1 / -1; grid-row: 1; } .menu-head-highlight{ padding:24px 22px; }
+  .instagram-grid{ grid-template-columns: repeat(3,1fr); } .b2b-photos{ width:100%; height:200px; }  .menu-head-highlight{ padding:24px 22px; }
 }
