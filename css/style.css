@@ -523,3 +523,21 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
   .b2b-form{ grid-template-columns: 1fr; }
   .instagram-grid{ grid-template-columns: repeat(3,1fr); } .b2b-photos{ max-width:100%; } .menu-head-highlight{ padding:24px 22px; }
 }
+
+/* ===== Mobile fixes: strip marquee overflow, hero, botones B2B ===== */
+.strip{ display:block; width:100%; max-width:100%; }
+
+@media (max-width: 760px){
+     .hero{ min-height: auto; }
+     .hero-pin{ position:relative; top:auto; height:auto; min-height:100vh; overflow:visible; }
+     .hero-ingredients{ display:none; }
+
+     .btn{ white-space:normal; text-align:center; }
+     .b2b-form-actions{ flex-direction:column; align-items:stretch; }
+     .b2b-form-actions .btn{ width:100%; }
+
+     .feature-banner-copy,
+     .press-source > div,
+     .b2b-intro-copy{ min-width:0; }
+     .feature-banner, .press-grid{ overflow:hidden; }
+}
