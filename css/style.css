@@ -580,3 +580,13 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
      .main-nav{ display:none; }
      .main-nav.open{ display:flex; }
 }
+
+/* ===== Mobile: ensanchar recuadro crema del formulario B2B ===== */
+@media (max-width: 760px){
+     .b2b-form{
+            max-width: none;
+            width: calc(100% + 24px);
+            margin-right: -24px;
+            padding: 20px 16px;
+     }
+}
