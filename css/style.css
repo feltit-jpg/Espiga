@@ -574,3 +574,9 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
 .b2b-photos{ order: 2; max-width:none; position:relative; overflow:hidden; }
      .b2b-photos img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
 }
+
+/* ===== Mobile: main-nav no debe existir en el layout cuando esta cerrado ===== */
+@media (max-width: 760px){
+     .main-nav{ display:none; }
+     .main-nav.open{ display:flex; }
+}
