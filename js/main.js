@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'Teléfono: ' + telefono + '\n\n' +
         'Mensaje:\n' + mensaje;
 
-      var mailto = 'mailto:ventasespigabolleria@gmail.com' +
+              var mailto = 'mailto:ventas@espigabolleria.cl' +
         '?subject=' + encodeURIComponent(subject) +
         '&body=' + encodeURIComponent(body);
 
