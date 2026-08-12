@@ -590,3 +590,31 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
             padding: 20px 16px;
      }
 }
+
+
+/* ===== Negocios: banner de socios comerciales ===== */
+.b2b-partners{
+  margin-top: 44px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(3,23,12,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.b2b-partners-label{
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+.b2b-partners-names{
+  font-family: var(--font-serif);
+  font-size: 16px;
+  color: var(--dark);
+  letter-spacing: .02em;
+}
