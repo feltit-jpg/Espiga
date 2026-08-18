@@ -639,3 +639,4 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
 @media (max-width:760px){
   .client-logo{ width: 120px; height: 72px; padding: 12px; }
 }
+.press-article-img{ max-width: 860px; width:100%; display:block; margin: 28px auto 0; border-radius: var(--radius); overflow:hidden; box-shadow: var(--shadow-soft); }
