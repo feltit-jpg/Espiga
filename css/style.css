@@ -32,7 +32,7 @@
 .bg-wheat{ background-image: var(--wheat-bg); background-repeat: repeat; }
 
 *, *::before, *::after{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
+html{ scroll-behavior: smooth; }
 body{
   margin:0;
   font-family: var(--font-sans);
@@ -40,9 +40,6 @@ body{
   background: var(--cream-white);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  width: 100%;
-  overflow-wrap: break-word;
-  word-break: break-word;
 }
 img{ max-width:100%; display:block; }
 a{ color: inherit; text-decoration: none; }
@@ -117,14 +114,16 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
 .btn svg{ width:16px; height:16px; flex-shrink:0; }
 
 /* Patrón de espigas (trama de marca) */
-.wheat-pattern{ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='90' viewBox='0 0 60 90'%3E%3Cg fill='none' stroke='%2303170c' stroke-width='2' opacity='0.06'%3E%3Cline x1='30' y1='6' x2='30' y2='84'/%3E%3Cpath d='M30 20 L20 12 M30 20 L40 12'/%3E%3Cpath d='M30 40 L20 32 M30 40 L40 32'/%3E%3Cpath d='M30 60 L20 52 M30 60 L40 52'/%3E%3Cpath d='M30 14 L24 8 M30 14 L36 8'/%3E%3C/g%3E%3C/svg%3E");
+.wheat-pattern{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='90' viewBox='0 0 60 90'%3E%3Cg fill='none' stroke='%2303170c' stroke-width='2' opacity='0.06'%3E%3Cline x1='30' y1='6' x2='30' y2='84'/%3E%3Cpath d='M30 20 L20 12 M30 20 L40 12'/%3E%3Cpath d='M30 40 L20 32 M30 40 L40 32'/%3E%3Cpath d='M30 60 L20 52 M30 60 L40 52'/%3E%3Cpath d='M30 14 L24 8 M30 14 L36 8'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat;
 }
 
 /* ===== Header ===== */
 .site-header{
   position: sticky; top:0; z-index: 500;
-  background: rgba(228,220,193,.97);
+  background: rgba(228,220,193,.94);
+  backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(3,23,12,.08);
 }
 .header-inner{
@@ -156,11 +155,11 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
 
 /* ===== Hero (foto fija de focaccia rellena) ===== */
 .hero{
-  position: relative; min-height: 92vh;
-  display:flex; align-items:flex-end; overflow:hidden;
+  position: relative; min-height: 170vh;
+
   color: var(--cream-white);
 }
-.hero-bg{ position:absolute; inset:0; z-index:0; overflow:hidden; background: var(--dark); }
+.hero-pin{ position: sticky; top:70px; height:92vh; display:flex; align-items:flex-end; overflow:hidden; } .hero-bg{ position:absolute; inset:0; z-index:0; overflow:hidden; background: var(--dark); }
 .hero-bg img{
   width:100%; height:100%; object-fit:cover; object-position:center 22%; display:block;
   transform: scale(1); transform-origin:center 30%;
@@ -203,7 +202,7 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
   padding: 16px 0; overflow:hidden; white-space:nowrap;
 }
 .strip-track{ display:inline-flex; gap: 48px; animation: scroll-strip 32s linear infinite; }
-.strip-track span{ ont-family: var(--font-serif); font-size:15px; letter-spacing:.04em; display:inline-flex; align-items:center; gap:48px;}
+.strip-track span{ font-family: var(--font-serif); font-size:15px; letter-spacing:.04em; display:inline-flex; align-items:center; gap:48px;}
 .strip-track span::after{ content:"✦"; color: var(--gold); font-size:11px; }
 @keyframes scroll-strip{ from{ transform: translateX(0);} to{ transform: translateX(-50%);} }
 
@@ -290,13 +289,7 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
 }
 .menu-panel-head{ display:flex; gap:28px; align-items:center; margin-bottom: 32px; }
 .menu-panel-head img{ width:180px; height:140px; object-fit:cover; border-radius: var(--radius); box-shadow: var(--shadow-soft); flex-shrink:0; }
-.menu-panel-head p{ margin:0; color:#514f48; font-size:18px; line-height:1.6; }
-.menu-head-highlight{
-  background: var(--green-light);
-  border-radius: var(--radius);
-  padding: 32px 40px;
-  max-width: 640px;
-}
+.menu-panel-head p{ margin:0; color:#514f48; font-size:18px; line-height:1.6; } .menu-head-highlight{ background: var(--green-light); border-radius: var(--radius); padding: 36px 44px; max-width: 880px; }
 .menu-callout{
   margin-top: 12px; border: 1.5px solid var(--gold); border-radius: var(--radius);
   padding: 22px 26px; background: rgba(165,127,67,.06);
@@ -381,7 +374,7 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
 .press-quote::after{ content:"”"; color: var(--gold); }
 .press-source{ margin-top:24px; display:flex; align-items:center; gap:14px; }
 .press-source .stars{ color: var(--gold); letter-spacing:2px; font-size:15px; }
- .press-source strong{ display:block; font-size:15px; }
+.press-source strong{ display:block; font-size:15px; }
 .press-source span{ font-size:13px; color: rgba(250,247,240,.65); }
 .review-card{
   background: rgba(250,247,240,.06); border:1px solid rgba(201,229,188,.18);
@@ -452,11 +445,10 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
 }
 @media (max-width: 760px){
   .section{ padding: 64px 0; }
-  .main-nav{ position:fixed; inset: 68px 0 0 0; width:100vw; max-width:100vw; background: var(--cream); flex-direction:column;
+  .main-nav{ position:fixed; inset: 68px 0 0 0; background: var(--cream); flex-direction:column;
     justify-content:flex-start; padding: 40px 24px; gap: 22px; transform: translateX(100%);
-    transition: transform .3s ease; height: calc(100vh - 68px); overflow-y:auto;
-    pointer-events:none; }
-  .main-nav.open{ transform: translateX(0); pointer-events:auto; }
+    transition: transform .3s ease; height: calc(100vh - 68px); }
+  .main-nav.open{ transform: translateX(0); }
   .main-nav a{ font-size:16px; }
   .burger{ display:block; }
   .header-actions .btn-sm span.txt{ display:none; }
@@ -467,10 +459,6 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
   .menu-panel-head{ flex-direction:column; }
   .menu-panel-head img{ width:100%; height:180px; }
   .menu-split{ grid-template-columns: 1fr; gap:24px; }
-  .about-media .tag-card{ left:0; }
-  .about-copy, .about-media, .feature-banner-copy, .b2b-intro-copy,
-  .review-card, .info-item, .b2b-photos{ min-width:0; max-width:100%; }
-  .btn{ white-space:normal; text-align:center; }
 }
 
 /* ===== Botones de pedido — logos reales de marca (header, flotantes) ===== */
@@ -497,7 +485,8 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
 .oi-pedidosya, .fb-pedidosya{ background:#ff2d6a; }
 .oi-ubereats, .fb-ubereats{ background:#06c167; }
 .oi-whatsapp, .fb-whatsapp{ background:#25D366; }
-.oi-instagram, .fb-instagram{ background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+.oi-instagram, .fb-instagram{
+  background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
 /* Logos largos (menú, CTA) */
@@ -511,18 +500,8 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
 
 /* ===== Negocios (B2B) ===== */
 .negocios-section{ background: #ffffff; background-image: var(--wheat-bg); background-repeat: repeat; }
-.b2b-intro{ display:flex; gap:36px; align-items:flex-start; margin-bottom: 36px; flex-wrap:wrap; }
-.b2b-photos{
-  display:grid;
-  grid-template-columns: 1.3fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap:12px;
-  width:380px;
-  height:300px;
-  flex-shrink:0;
-}
-.b2b-photos img{ width:100%; height:100%; object-fit:cover; border-radius: var(--radius); box-shadow: var(--shadow-soft); display:block; }
-.b2b-photo-main{ grid-row: 1 / span 2; }
+.b2b-intro{ display:flex; flex-direction:column; gap:24px; margin-bottom: 36px; }
+.b2b-photos{ width:100%; max-width:600px; } .b2b-photos img{ display:block; width:100%; aspect-ratio:4/3; object-fit:cover; border-radius: var(--radius); box-shadow: var(--shadow-soft); }
 .b2b-intro-copy{ flex:1; min-width:260px; }
 .b2b-intro-copy p{ color:#31302a; font-size:15.5px; }
 .b2b-form{
@@ -542,8 +521,122 @@ p{ margin:0 0 1em; line-height:1.7; text-align: justify; text-align-last: left; 
 
 @media (max-width: 760px){
   .b2b-form{ grid-template-columns: 1fr; }
-  .instagram-grid{ grid-template-columns: repeat(3,1fr); }
-  .b2b-photos{ width:100%; height:auto; grid-template-columns: 1fr 1fr; grid-template-rows: 200px 140px; }
-  .b2b-photo-main{ grid-column: 1 / -1; grid-row: 1; }
-  .menu-head-highlight{ padding:24px 22px; }
+  .instagram-grid{ grid-template-columns: repeat(3,1fr); } .b2b-photos{ max-width:100%; } .menu-head-highlight{ padding:24px 22px; }
 }
+
+/* ===== Mobile fixes: strip marquee overflow, hero, botones B2B ===== */
+.strip{ display:block; width:100%; max-width:100%; }
+
+@media (max-width: 760px){
+     .hero{ min-height: auto; }
+     .hero-pin{ position:relative; top:auto; height:auto; min-height:100vh; overflow:visible; }
+     .hero-ingredients{ display:none; }
+
+     .btn{ white-space:normal; text-align:center; }
+     .b2b-form-actions{ flex-direction:column; align-items:stretch; }
+     .b2b-form-actions .btn{ width:100%; }
+
+     .feature-banner-copy,
+     .press-source > div,
+     .b2b-intro-copy{ min-width:0; }
+     .feature-banner, .press-grid{ overflow:hidden; }
+}
+
+
+/* ===== Desktop: menu verde full-bleed + negocios lado a lado ===== */
+@media (min-width: 761px){
+     .menu-head-highlight{
+            position: relative; z-index: 1;
+            max-width: none; margin-left: 0; margin-right: 0;
+            padding: 40px 0 0;
+     }
+     .menu-head-highlight::before{
+            content: "";
+            position: absolute; top: 0; bottom: 0; left: 50%; right: 50%;
+            width: 100vw; margin-left: -50vw; margin-right: -50vw;
+            background: var(--green-light);
+            z-index: -1;
+     }
+     .menu-panel-head{
+            position: relative; z-index: 1;
+            padding: 32px 0 40px;
+     }
+     .menu-panel-head::before{
+            content: "";
+            position: absolute; top: 0; bottom: 0; left: 50%; right: 50%;
+            width: 100vw; margin-left: -50vw; margin-right: -50vw;
+            background: var(--green-light);
+            z-index: -1;
+     }
+
+  .b2b-intro{ display:grid; grid-template-columns: 1fr 1fr; align-items:stretch; gap:32px; }
+     .b2b-intro-copy{ order: 1; }
+.b2b-photos{ order: 2; max-width:none; position:relative; overflow:hidden; }
+     .b2b-photos img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+}
+
+/* ===== Mobile: main-nav no debe existir en el layout cuando esta cerrado ===== */
+@media (max-width: 760px){
+     .main-nav{ display:none; }
+     .main-nav.open{ display:flex; }
+}
+
+/* ===== Mobile: ensanchar recuadro crema del formulario B2B ===== */
+@media (max-width: 760px){
+     .b2b-form{
+            max-width: none;
+            width: calc(100% + 48px);
+            margin: 0 -24px;
+            padding: 20px 16px;
+     }
+}
+
+/* ===== Negocios: carrusel de logos de clientes ===== */
+.clients-section{
+  margin-top: 44px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(3,23,12,.1);
+  text-align: center;
+}
+.clients-label{
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 22px;
+}
+.clients-carousel{
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+.clients-carousel:hover .clients-track{ animation-play-state: paused; }
+.clients-track{
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  width: max-content;
+  animation: clients-scroll 22s linear infinite;
+}
+.client-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 90px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-soft);
+  padding: 16px;
+}
+.client-logo img{ max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+.client-logo--dark{ background: var(--dark); }
+.client-logo--light{ background: #ffffff; border: 1px solid rgba(3,23,12,.08); }
+@keyframes clients-scroll{ from{ transform: translateX(0);} to{ transform: translateX(-50%);} }
+@media (max-width:760px){
+  .client-logo{ width: 120px; height: 72px; padding: 12px; }
+}
+.press-article-img{ max-width: 860px; width:100%; display:block; margin: 28px auto 0; border-radius: var(--radius); overflow:hidden; box-shadow: var(--shadow-soft); }
