@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function () {
       submitBtn.textContent = 'Enviando…';
       setStatus('', '');
 
-      fetch('https://formsubmit.co/ajax/ventas@espigabolleria.cl', {
+      fetch('https://formsubmit.co/ajax/contacto@espigabolleria.cl', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(data)
