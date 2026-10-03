@@ -791,3 +791,12 @@ section[id]{ scroll-margin-top: 76px; }
   .mb-btn{ font-size: 12.5px; white-space: nowrap; padding: 0 6px; gap: 5px; }
   .mobile-bar{ grid-template-columns: 1.2fr 1fr 1.1fr; }
 }
+
+/* Reseñas reales de Google */
+.google-reviews{ display:grid; gap: 14px; margin: 6px 0 16px; }
+.google-reviews li{ border-top: 1px solid rgba(201,229,188,.15); padding-top: 12px; }
+.google-reviews li:first-child{ border-top:0; padding-top: 0; }
+.google-reviews .stars{ color: var(--gold); font-size: 13px; letter-spacing: 1px; }
+.google-reviews p{ margin: 4px 0 4px; font-size: 14px; line-height:1.55; color: rgba(250,247,240,.85); text-align:left; }
+.review-author{ font-size: 12px; color: rgba(250,247,240,.55); font-weight:600; }
+.review-cta-copy{ font-size: 13.5px !important; margin: 0; }
