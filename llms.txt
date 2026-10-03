@@ -1,0 +1,16 @@
+# Espiga Panadería & Cafetería
+
+> Panadería y cafetería de barrio en Av. Tobalaba 4191, Local 1, Providencia, Santiago de Chile (esquina Eucaliptus). Masa madre de fermentación larga, recetas francesas, focaccia rellena, croissants, brunch y café de especialidad al estilo italiano.
+
+- Horario: lunes a viernes 8:00-20:00, sábado 9:00-15:00, domingo 9:00-14:00
+- WhatsApp / teléfono: +56 9 5896 3440
+- Instagram: https://instagram.com/espigabolleria
+- Delivery: PedidosYa y Uber Eats
+- Encargos con 48 hrs de anticipación: kuchen de nuez entero, pan de hamburguesa, pan de mesa, pan de completo
+- Negocios (B2B): abastecimiento de pan y bollería para cafeterías, restaurantes, hoteles y oficinas; contacto ventas@espigabolleria.cl
+
+## Páginas
+- [Sitio y menú con precios](https://espigabolleria.cl/#menu)
+- [Encargos](https://espigabolleria.cl/#encargos)
+- [Negocios B2B](https://espigabolleria.cl/#negocios)
+- [Precios en formato JSON](https://espigabolleria.cl/data/precios.json)

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://espigabolleria.cl/sitemap.xml
