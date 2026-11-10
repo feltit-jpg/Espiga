@@ -11,6 +11,8 @@
 
 ## Páginas
 - [Sitio y menú con precios](https://espigabolleria.cl/#menu)
-- [Encargos](https://espigabolleria.cl/#encargos)
+- [Encargos de pan y kuchen (48 hrs)](https://espigabolleria.cl/encargos.html)
+- [Focaccia rellena](https://espigabolleria.cl/focaccia-rellena.html)
+- [Pan de masa madre](https://espigabolleria.cl/pan-masa-madre-providencia.html)
 - [Negocios B2B](https://espigabolleria.cl/#negocios)
 - [Precios en formato JSON](https://espigabolleria.cl/data/precios.json)

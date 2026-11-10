@@ -174,10 +174,14 @@ document.addEventListener('DOMContentLoaded', function () {
             if (typeof prices[key] === 'string' && prices[key].trim()) priceEl.textContent = prices[key];
           });
         });
-        var enc = data['Encargos'] || {};
-        document.querySelectorAll('[data-price-key^="encargos|"]').forEach(function (el) {
-          var k = el.getAttribute('data-price-key').split('|')[1];
-          if (typeof enc[k] === 'string' && enc[k].trim()) el.textContent = enc[k];
+        // Precios sueltos en cualquier página: data-price-key="Sección|Nombre" (ej. "encargos|Pan de mesa (20 un.)")
+        var sections = {};
+        Object.keys(data).forEach(function (k) { sections[k.toLowerCase()] = data[k]; });
+        document.querySelectorAll('[data-price-key]').forEach(function (el) {
+          var parts = el.getAttribute('data-price-key').split('|');
+          var sec = sections[(parts[0] || '').toLowerCase()];
+          var val = sec && sec[parts[1]];
+          if (typeof val === 'string' && val.trim()) el.textContent = val;
         });
       })
       .catch(function () { /* se mantienen los precios del HTML */ });
@@ -282,7 +286,7 @@ document.addEventListener('DOMContentLoaded', function () {
       submitBtn.textContent = 'Enviando…';
       setStatus('', '');
 
-      fetch('https://formsubmit.co/ajax/contacto@espigabolleria.cl', {
+      fetch('https://formsubmit.co/ajax/ventas@espigabolleria.cl', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(data)
