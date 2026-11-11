@@ -928,3 +928,8 @@ section[id]{ scroll-margin-top: 76px; }
   .about-media .tag-card strong{ font-size: 21px; }
   .about-media .tag-card span{ display:block; line-height:1.4; font-size:12px; }
 }
+
+/* ===== Tarjetas de producto con foto de catálogo ===== */
+.encargo-card--foto{ padding-top: 0; overflow: hidden; }
+.encargo-photo{ display:block; flex-shrink:0; width: calc(100% + 44px); height: auto; max-width:none; margin: 0 -22px 14px; aspect-ratio: 4/3; object-fit: cover; background: #1b1d22; }
+.encargo-card--destacado:not(.encargo-card--foto){ justify-content: center; }
