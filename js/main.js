@@ -309,4 +309,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
   }
+
+  // ===== Botones flotantes: aparecen recién al pasar la portada =====
+  // (en la portada ya están los mismos íconos en el encabezado)
+  var floatStack = document.querySelector('.float-stack');
+  var heroEl = document.querySelector('#inicio, .page-hero');
+  if (floatStack) {
+    if (heroEl && 'IntersectionObserver' in window) {
+      floatStack.classList.add('float-stack--hidden');
+      new IntersectionObserver(function (entries) {
+        floatStack.classList.toggle('float-stack--hidden', entries[0].isIntersecting);
+      }, { rootMargin: '-120px 0px 0px 0px' }).observe(heroEl);
+    }
+  }
 });
