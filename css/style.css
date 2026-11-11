@@ -845,3 +845,86 @@ section[id]{ scroll-margin-top: 76px; }
   .encargos-grid--3{ grid-template-columns: 1fr; }
   .page-visit-actions .btn{ flex: 1 1 auto; }
 }
+
+/* ===================================================================
+   Carta v2 (nov 2026): fondo limpio, pestañas tipo píldora,
+   grupos en tarjetas y precios legibles. Sobrescribe estilos anteriores.
+   =================================================================== */
+#menu.menu-section{ background: var(--cream-soft); background-image: none; }
+#menu .menu-head-highlight{ background: transparent; padding: 0; max-width: none; margin: 0 0 8px; }
+#menu .menu-head-highlight::before, #menu .menu-panel-head::before{ display:none; }
+#menu .section-head h2{ font-size: clamp(32px, 4vw, 46px); }
+#menu .menu-tabs{
+  position: sticky; top: 70px; z-index: 20;
+  display:flex; flex-wrap: nowrap; justify-content:center; gap: 6px;
+  width: max-content; max-width: 100%; margin: 0 auto 36px; padding: 6px;
+  background: #fff; border: 1px solid rgba(3,23,12,.1); border-radius: 999px;
+  box-shadow: 0 8px 22px rgba(3,23,12,.08);
+  overflow-x: auto; scrollbar-width: none;
+}
+#menu .menu-tabs::-webkit-scrollbar{ display:none; }
+#menu .menu-tab{
+  flex-shrink:0; font-size: 14px; letter-spacing:.02em; text-transform:none; font-weight:600;
+  padding: 11px 20px; border-radius: 999px; color: #514f48; white-space:nowrap;
+}
+#menu .menu-tab::after{ display:none; }
+#menu .menu-tab:hover{ background: var(--cream-soft); color: var(--dark); }
+#menu .menu-tab.active{ background: var(--dark); color: var(--cream-white); }
+#menu .menu-panel-head{ padding: 0; margin-bottom: 28px; gap: 22px; }
+#menu .menu-panel-head img{ width: 132px; height: 132px; border-radius: 50%; object-fit: cover; box-shadow: 0 10px 24px rgba(3,23,12,.18); }
+#menu .menu-panel-head p{ font-size: 16.5px; color:#3d3d38; max-width: 46em; }
+#menu .menu-group{
+  background:#fff; border: 1px solid rgba(3,23,12,.08); border-radius: 14px;
+  padding: 26px 30px 14px; margin-bottom: 20px; box-shadow: 0 4px 14px rgba(3,23,12,.04);
+}
+#menu .menu-group h3, #menu .menu-col-title{
+  font-family: var(--font-serif); font-size: 22px; font-weight:600; text-transform:none; letter-spacing:0;
+  color: var(--dark); margin: 0 0 6px; padding: 0; border: 0;
+}
+#menu .menu-col-title{ font-size: 18px; margin-top: 4px; }
+#menu .menu-item{ padding: 13px 0; border-bottom: 1px solid rgba(3,23,12,.07); align-items: baseline; }
+#menu .menu-grid .menu-item:nth-last-child(-n+2), #menu .menu-col .menu-item:last-child{ border-bottom: 0; }
+#menu .menu-item-name{ font-size: 15px; }
+#menu .menu-item-desc{ font-size: 13px; line-height:1.45; }
+#menu .menu-item-price{ font-family: var(--font-sans); font-weight: 600; font-size: 15px; color: var(--gold-dark); font-variant-numeric: tabular-nums; }
+#menu .menu-callout{ background: var(--cream-white); border: 0; border-left: 4px solid var(--gold); border-radius: 10px; margin: 6px 0 14px; }
+#menu .menu-note{ background: var(--cream-soft); margin: 10px 0 14px; border-radius: 8px; }
+#menu .menu-group:has(> .menu-callout){ background: transparent; border: 0; box-shadow: none; padding: 0; }
+#menu .menu-callout{ background:#fff; box-shadow: 0 4px 14px rgba(3,23,12,.04); padding: 22px 30px 10px; }
+#menu .menu-panel-head p, #menu .menu-note{ text-align:left; }
+#menu .menu-cta{ background:#fff; border-radius: 14px; padding: 20px 24px; border: 1px solid rgba(3,23,12,.08); margin-top: 28px; }
+.menu-cta-title{ font-family: var(--font-serif); font-size: 20px; font-weight:600; margin-right: 6px; }
+@media (max-width: 760px){
+  #menu .menu-tabs{ justify-content:flex-start; width: auto; margin-left: -4px; margin-right: -4px; top: 64px; }
+  #menu .menu-tab{ font-size: 13.5px; padding: 10px 15px; }
+  #menu .menu-panel-head{ flex-direction: row; align-items:center; gap: 16px; }
+  #menu .menu-panel-head img{ width: 84px; height: 84px; }
+  #menu .menu-panel-head p{ font-size: 14.5px; line-height: 1.5; }
+  #menu .menu-group{ padding: 20px 18px 8px; border-radius: 12px; }
+  #menu .menu-group h3{ font-size: 20px; }
+  #menu .menu-item{ padding: 11px 0; }
+  #menu .menu-grid .menu-item:nth-last-child(2){ border-bottom: 1px solid rgba(3,23,12,.07); }
+  #menu .menu-cta{ padding: 18px; }
+  #menu .menu-callout{ padding: 18px 18px 6px; }
+  #menu .menu-cta-logo img{ height: 40px; }
+}
+
+/* ===== Nosotros: marco con fotos que rotan ===== */
+.about-frame{ position:relative; aspect-ratio: 4/5; max-height: 620px; width:100%; border-radius: 12px; overflow:hidden; box-shadow: var(--shadow-soft); }
+@media (max-width: 760px){ .about-frame{ aspect-ratio: 4/3; } }
+
+/* ===== Trama de espigas más suave (se veía muy marcada detrás del texto) ===== */
+.instagram-section, .gallery-section, .negocios-section{
+  background-image: linear-gradient(rgba(255,255,255,.82), rgba(255,255,255,.82)), var(--wheat-bg);
+}
+.menu-section:not(#menu){
+  background-image: linear-gradient(rgba(228,220,193,.7), rgba(228,220,193,.7)), var(--wheat-bg);
+}
+
+/* ===== Celular: texto alineado a la izquierda (el justificado dejaba huecos) y tarjeta "100%" dentro de la foto ===== */
+@media (max-width: 760px){
+  p{ text-align: left; }
+  .about-media .tag-card{ left: 12px; bottom: -18px; padding: 14px 16px; max-width: 210px; }
+  .about-media .tag-card strong{ font-size: 21px; }
+  .about-media .tag-card span{ display:block; line-height:1.4; font-size:12px; }
+}

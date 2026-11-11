@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=6">
+<link rel="stylesheet" href="css/style.css?v=7">
 
 <!-- Open Graph / redes sociales -->
 <meta property="og:title" content="Espiga Panadería &amp; Cafetería — Providencia">
@@ -185,7 +185,16 @@
 <section class="section about wheat-pattern" id="nosotros">
   <div class="container about-grid">
     <div class="about-media">
-      <img class="about-slider" src="assets/img/g1-fachada.webp" alt="Fachada de Espiga Panadería en Av. Tobalaba, Providencia" width="927" height="1400" loading="lazy">
+      <div class="about-frame">
+        <div class="photo-slider" data-interval="4200">
+          <div class="photo-slider-track">
+            <img src="assets/img/g1-fachada.webp" alt="Fachada y terraza de Espiga Panadería en Av. Tobalaba, Providencia" width="927" height="1400" loading="lazy">
+            <img src="assets/img/g8-croissants-real.webp" alt="Croissants recién horneados en Espiga" width="927" height="1400" loading="lazy">
+            <img src="assets/img/g5-latte.webp" alt="Latte con latte art en Espiga" width="927" height="1400" loading="lazy">
+            <img src="assets/img/g7-pan-campo.webp" alt="Pan de campo de masa madre de Espiga" width="927" height="1400" loading="lazy">
+          </div>
+        </div>
+      </div>
       <div class="tag-card">
         <strong>100%</strong>
         <span>Panadería y pastelería elaborada a diario, en el local</span>
@@ -197,7 +206,7 @@
       <p>Espiga nació en Providencia con una idea simple: hornear como se hace en las mejores boulangeries, servir el café como se sirve en Italia, y hacerlo todos los días, sin atajos. Trabajamos con masa madre de fermentación larga, mantequilla de verdad y harinas seleccionadas para que cada pan, croissant y focaccia salga del horno con la corteza y la miga que se merece.</p>
       <p>Nos encontrarás en Av. Tobalaba 4183, a pasos de Eucaliptus — el rincón que el reconocido crítico gastronómico Ruperto de Nola describió como uno que <a href="#prensa" class="text-link">"vale la pena desviarse para conocer"</a>.</p>
       <ul class="about-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg> <a href="/pan-masa-madre-providencia.html" class="text-link">Masa madre de 12 horas de fermentación</a>, horneada a diario</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg> <span><a href="/pan-masa-madre-providencia.html" class="text-link">Masa madre de 12 horas de fermentación</a>, horneada a diario</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg> Cafetería clásica italiana: espresso, cortado, flat white y más</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/></svg> Sándwiches y brunch armados al gusto, para comer aquí o para llevar</li>
       </ul>
@@ -245,7 +254,7 @@
   <div class="container">
     <div class="menu-head-highlight" style="margin-left:auto;margin-right:auto;"><div class="section-head center">
       <div class="eyebrow" style="justify-content:center;">Carta 2026</div>
-      <h2>NUESTRO MENÚ</h2>
+      <h2>Nuestro menú</h2>
       <p>Todo se hornea y se prepara en el local.</p>
     </div>
 
@@ -261,7 +270,7 @@
       <!-- PANADERÍA Y BOLLERÍA -->
       <div class="menu-panel active" id="panel-panaderia" role="tabpanel">
         <div class="menu-panel-head">
-          <img src="assets/img/g9-baguettes-cesta.webp" alt="Panes de masa madre con semillas recién horneados en Espiga" width="180" height="140" loading="lazy">
+          <img src="assets/img/g7-pan-campo.webp" alt="Pan de campo de masa madre recién horneado en Espiga" width="180" height="140" loading="lazy">
           <p>Pan horneado en el local, todos los días: masa madre de fermentación larga, baguettes, ciabattas y nuestra bollería francesa clásica.</p>
         </div>
 
@@ -324,7 +333,7 @@
       <!-- SÁNDWICHES -->
       <div class="menu-panel" id="panel-sandwiches" role="tabpanel">
         <div class="menu-panel-head">
-          <img src="assets/img/g3-baguettes.webp" alt="Baguettes recién horneadas para armar tu sándwich en Espiga" width="180" height="140" loading="lazy">
+          <img src="assets/img/g9-baguettes-cesta.webp" alt="Baguettes recién horneadas para armar tu sándwich en Espiga" width="180" height="140" loading="lazy">
           <p>Arma tu sándwich a tu gusto: elige el pan, tu relleno favorito y suma los extras que quieras.</p>
         </div>
         <div class="menu-group">
@@ -418,10 +427,10 @@
     </div>
 
     <div class="menu-cta">
+      <span class="menu-cta-title">Pide ahora</span>
       <a href="https://wa.me/56958963440?text=Hola%20Espiga%2C%20quiero%20hacer%20un%20pedido%3A%20" target="_blank" rel="noopener" class="menu-cta-logo" data-track="whatsapp" data-loc="menu"><img src="assets/img/whatsapp-long.webp" alt="Pedir por WhatsApp" width="114" height="46" loading="lazy"></a>
       <a href="https://www.pedidosya.cl/restaurantes/santiago/espiga-panaderia-e71de2d0-ff0e-44c2-8fc5-16a61043ae1c-menu" target="_blank" rel="noopener" class="menu-cta-logo" data-track="pedidosya" data-loc="menu"><img src="assets/img/pedidosya-long.webp" alt="Pedir en PedidosYa" width="142" height="46" loading="lazy"></a>
       <a href="https://www.ubereats.com/cl/store/espiga-panaderia-santiago/zALc1uJ6V3Go2YLQgG5O0g" target="_blank" rel="noopener" class="menu-cta-logo" data-track="ubereats" data-loc="menu"><img src="assets/img/ubereats-long.png" alt="Pedir en Uber Eats" width="174" height="46" loading="lazy"></a>
-      <span class="menu-cta-note">¿Pedido grande o para un evento? Mira los <a href="#encargos" class="text-link">encargos</a>.</span>
     </div>
   </div>
 </section>
@@ -529,7 +538,7 @@
     <div class="gallery-grid">
       <a class="g-big" href="assets/img/g7-pan-campo.webp" target="_blank" rel="noopener"><img src="assets/img/g7-pan-campo.webp" width="927" height="1400" decoding="async" alt="Pan de campo recién horneado Espiga" loading="lazy"></a>
       <a href="assets/img/g2-pochito.webp" target="_blank" rel="noopener"><img width="1400" height="927" src="assets/img/g2-pochito.webp" decoding="async" alt="Pochito: brunch con huevos pochados y palta" loading="lazy"></a>
-      <a href="assets/img/g3-baguettes.webp" target="_blank" rel="noopener"><img src="assets/img/g3-baguettes.webp" width="927" height="1400" decoding="async" alt="Baguettes recién horneadas" loading="lazy"></a>
+      <a href="assets/img/g1-fachada.webp" target="_blank" rel="noopener"><img src="assets/img/g1-fachada.webp" width="927" height="1400" decoding="async" alt="Terraza de Espiga en Av. Tobalaba" loading="lazy"></a>
       <a href="assets/img/g4-kuchen.webp" target="_blank" rel="noopener"><img src="assets/img/g4-kuchen.webp" width="927" height="1400" decoding="async" alt="Kuchen de frambuesa Espiga" loading="lazy"></a>
       <a href="assets/img/g5-latte.webp" target="_blank" rel="noopener"><img src="assets/img/g5-latte.webp" width="927" height="1400" decoding="async" alt="Latte con latte art en Espiga" loading="lazy"></a>
       <a href="assets/img/g6-focaccia-vegana.webp" target="_blank" rel="noopener"><img src="assets/img/g6-focaccia-vegana.webp" width="927" height="1400" decoding="async" alt="Focaccia vegana con pesto y berenjena" loading="lazy"></a>
@@ -551,19 +560,27 @@
     <h2>@espigabolleria</h2>
     <div class="instagram-carousel">
       <div class="instagram-track">
-        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" data-track="instagram" data-loc="carrusel"><img src="assets/img/focaccia-scrub-1.webp" width="320" height="320" alt="Focaccia rellena Espiga" loading="lazy"></a>
-        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" data-track="instagram" data-loc="carrusel"><img src="assets/img/focaccia-scrub-2.webp" width="320" height="320" alt="Focaccia rellena Espiga" loading="lazy"></a>
-        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" data-track="instagram" data-loc="carrusel"><img src="assets/img/banner-focaccia.webp" width="320" height="320" alt="Focaccia rellena con aceitunas Espiga" loading="lazy"></a>
-        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" data-track="instagram" data-loc="carrusel"><img src="assets/img/focaccia-scrub-4.webp" width="320" height="320" alt="Focaccia abierta Espiga" loading="lazy"></a>
-        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" data-track="instagram" data-loc="carrusel"><img src="assets/img/focaccia-scrub-5.webp" width="320" height="320" alt="Focaccia rellena Espiga" loading="lazy"></a>
-        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" data-track="instagram" data-loc="carrusel"><img src="assets/img/b2b-box.webp" width="320" height="320" alt="Box de Espiga Panadería" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" data-track="instagram" data-loc="carrusel"><img src="assets/img/g2-pochito.webp" width="320" height="320" alt="Brunch Pochito con huevos pochados y palta en Espiga" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" data-track="instagram" data-loc="carrusel"><img src="assets/img/g8-croissants-real.webp" width="320" height="320" alt="Croissants recién horneados en Espiga" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" data-track="instagram" data-loc="carrusel"><img src="assets/img/focaccia-scrub-5.webp" width="320" height="320" alt="Focaccia rellena de queso de cabra y aceitunas en Espiga" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" data-track="instagram" data-loc="carrusel"><img src="assets/img/g5-latte.webp" width="320" height="320" alt="Latte con latte art en Espiga" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" data-track="instagram" data-loc="carrusel"><img src="assets/img/g4-kuchen.webp" width="320" height="320" alt="Trozo de kuchen en Espiga" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" data-track="instagram" data-loc="carrusel"><img src="assets/img/g7-pan-campo.webp" width="320" height="320" alt="Pan de campo de masa madre en Espiga" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" data-track="instagram" data-loc="carrusel"><img src="assets/img/g10-pan-chocolate.webp" width="320" height="320" alt="Pan de chocolate trenzado en Espiga" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" data-track="instagram" data-loc="carrusel"><img src="assets/img/b2b-box.webp" width="320" height="320" alt="Box de Espiga para compartir" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" data-track="instagram" data-loc="carrusel"><img src="assets/img/g13-galletas.webp" width="320" height="320" alt="Galletones recién horneados en Espiga" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" data-track="instagram" data-loc="carrusel"><img src="assets/img/g1-fachada.webp" width="320" height="320" alt="Terraza de Espiga en Av. Tobalaba" loading="lazy"></a>
         <!-- duplicado para el loop continuo -->
-        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" aria-hidden="true"><img src="assets/img/focaccia-scrub-1.webp" width="320" height="320" alt="" loading="lazy"></a>
-        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" aria-hidden="true"><img src="assets/img/focaccia-scrub-2.webp" width="320" height="320" alt="" loading="lazy"></a>
-        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" aria-hidden="true"><img src="assets/img/banner-focaccia.webp" width="320" height="320" alt="" loading="lazy"></a>
-        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" aria-hidden="true"><img src="assets/img/focaccia-scrub-4.webp" width="320" height="320" alt="" loading="lazy"></a>
-        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" aria-hidden="true"><img src="assets/img/focaccia-scrub-5.webp" width="320" height="320" alt="" loading="lazy"></a>
-        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" aria-hidden="true"><img src="assets/img/b2b-box.webp" width="320" height="320" alt="" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/img/g2-pochito.webp" width="320" height="320" alt="" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/img/g8-croissants-real.webp" width="320" height="320" alt="" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/img/focaccia-scrub-5.webp" width="320" height="320" alt="" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/img/g5-latte.webp" width="320" height="320" alt="" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/img/g4-kuchen.webp" width="320" height="320" alt="" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/img/g7-pan-campo.webp" width="320" height="320" alt="" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/img/g10-pan-chocolate.webp" width="320" height="320" alt="" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/img/b2b-box.webp" width="320" height="320" alt="" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/img/g13-galletas.webp" width="320" height="320" alt="" loading="lazy"></a>
+        <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/img/g1-fachada.webp" width="320" height="320" alt="" loading="lazy"></a>
       </div>
     </div>
     <a href="https://instagram.com/espigabolleria" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:#c9e5bc;" data-track="instagram" data-loc="seccion_instagram">Síguenos @espigabolleria</a>
